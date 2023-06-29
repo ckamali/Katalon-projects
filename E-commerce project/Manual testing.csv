@@ -1,0 +1,11 @@
+,OS: Windows 10 | Browser: Chrome 114 | Resolution: 1366x720 |,,
+Step,Data,XPath,Result
+Open website,https://www.demoblaze.com/,,Pass     
+"Click on ""Sign up""",,//a[@id='signin2'],
+"Enter ""kamali"" into ""Username:""",kamali,//input[@id='sign-username'],
+"Enter ""******"" into ""Password:""",******,//input[@id='sign-password'],
+"Click on ""Sign up""",,//button[normalize-space()='Sign up'],
+"Click on ""Log in""",,//a[@id='login2'],
+"Enter ""kamali"" into ""loginusername""",kamali,//input[@id='loginusername'],
+"Enter ""******"" into ""loginpassword""",******,//input[@id='loginpassword'],
+"Click on ""Log in""",,//button[normalize-space()='Log in'],
