@@ -1,3 +1,3 @@
-Open website,,,,,,,
-"Click on ""About us""",,//a[normalize-space()='About us'],,,,,
-"Click on ""Close""",,//div[@id='videoModal']//button[@type='button'][normalize-space()='Close'],,,,,
+Open website,,,//a[normalize-space()='Samsung galaxy s6']
+"Click on ""Samsung galaxy s6""",,,//a[normalize-space()='Add to cart']
+"Click on ""Add to cart""",,,

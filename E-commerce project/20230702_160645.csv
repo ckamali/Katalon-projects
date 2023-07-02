@@ -1,0 +1,66 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+healthcare-tests - TS_RegressionTest,Windows - Chrome 114.0.0.0,,,02-07-2023 16:07,02-07-2023 16:16,9m - 41.329s,PASSED
+,,,,,,9m - 41.329s,
+Test Cases/Main Test Cases/TC1_Verify Successful Login,Windows - Chrome 114.0.0.0,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,02-07-2023 16:07,02-07-2023 16:09,9m - 41.329s,PASSED
+"comment(""Story: Login to CURA system"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:07,02-07-2023 16:07,9m - 41.329s,PASSED
+"comment(""Given that the user has the valid login information"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:07,02-07-2023 16:07,9m - 41.329s,PASSED
+openBrowser(G_SiteURL),Windows - Chrome 114.0.0.0,,,02-07-2023 16:07,02-07-2023 16:08,9m - 41.329s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Windows - Chrome 114.0.0.0,,,02-07-2023 16:08,02-07-2023 16:08,9m - 41.329s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:08,02-07-2023 16:09,9m - 41.329s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+"comment(""When he logins to CURA system"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+"comment(""Then he should be able to login successfully"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+closeBrowser(),Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+Video,Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+,,,,,,9m - 41.329s,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment,Windows - Chrome 114.0.0.0,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,02-07-2023 16:09,02-07-2023 16:12,9m - 41.329s,PASSED
+"comment(""Story: Book an appointment"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+"comment(""Given that the user has logged into their account"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:09,9m - 41.329s,PASSED
+openBrowser(G_SiteURL),Windows - Chrome 114.0.0.0,,,02-07-2023 16:09,02-07-2023 16:10,9m - 41.329s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:10,02-07-2023 16:11,9m - 41.329s,PASSED
+"comment(""And Appointment page is displayed"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:11,02-07-2023 16:11,9m - 41.329s,PASSED
+if (true),Windows - Chrome 114.0.0.0,,,02-07-2023 16:11,02-07-2023 16:11,9m - 41.329s,PASSED
+"comment(""When he fills in valid information in Appointment page"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:11,02-07-2023 16:11,9m - 41.329s,PASSED
+"click(findTestObject(""Page_CuraAppointment/btn_BookAppointment""))",Windows - Chrome 114.0.0.0,,,02-07-2023 16:11,02-07-2023 16:12,9m - 41.329s,PASSED
+"verifyTextPresent(""Appointment Confirmation"", false)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+"comment(""Then he should be able to book a new appointment"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+if (true),Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+takeScreenshot(),Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+closeBrowser(),Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+Video,Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+,,,,,,9m - 41.329s,
+Test Cases/Main Test Cases/TC3_Visual Testing Example,Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:16,9m - 41.329s,PASSED
+"comment(""Story: Book an appointment"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+"comment(""Given that the user has logged into their account"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:12,9m - 41.329s,PASSED
+openBrowser(G_SiteURL),Windows - Chrome 114.0.0.0,,,02-07-2023 16:12,02-07-2023 16:13,9m - 41.329s,PASSED
+"takeScreenshotAsCheckpoint(""login page"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:13,02-07-2023 16:14,9m - 41.329s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:14,02-07-2023 16:14,9m - 41.329s,PASSED
+"comment(""And Appointment page is displayed"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:14,02-07-2023 16:14,9m - 41.329s,PASSED
+if (true),Windows - Chrome 114.0.0.0,,,02-07-2023 16:14,02-07-2023 16:15,9m - 41.329s,PASSED
+"comment(""When he fills in valid information in Appointment page"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:15,02-07-2023 16:15,9m - 41.329s,PASSED
+"click(findTestObject(""Page_CuraAppointment/btn_BookAppointment""))",Windows - Chrome 114.0.0.0,,,02-07-2023 16:15,02-07-2023 16:15,9m - 41.329s,PASSED
+"verifyTextPresent(""Appointment Confirmation"", false)",Windows - Chrome 114.0.0.0,,,02-07-2023 16:15,02-07-2023 16:15,9m - 41.329s,PASSED
+"comment(""Then he should be able to book a new appointment"")",Windows - Chrome 114.0.0.0,,,02-07-2023 16:15,02-07-2023 16:15,9m - 41.329s,PASSED
+if (true),Windows - Chrome 114.0.0.0,,,02-07-2023 16:15,02-07-2023 16:16,9m - 41.329s,PASSED
+takeScreenshot(),Windows - Chrome 114.0.0.0,,,02-07-2023 16:16,02-07-2023 16:16,9m - 41.329s,PASSED
+closeBrowser(),Windows - Chrome 114.0.0.0,,,02-07-2023 16:16,02-07-2023 16:16,9m - 41.329s,PASSED
+Video,Windows - Chrome 114.0.0.0,,,02-07-2023 16:16,02-07-2023 16:16,9m - 41.329s,PASSED
+,,,,,,9m - 41.329s,
